@@ -1,5 +1,6 @@
 import clipboardImg from '../assets/no-projects.png';
 import Button from './Button.jsx';
+import HeadingTwo from './HeadingTwo.jsx';
 export default function Placeholder({onInitAddProject}) {
 
   return (
@@ -9,7 +10,7 @@ export default function Placeholder({onInitAddProject}) {
         alt='a clipboard with an empty to-do list on'
         className='w-16 h-16 object-contain mx-auto'
       />
-      <h2 className='text-xl font-bold text-stone-500 my-4'>Let's get going</h2>
+      <HeadingTwo>Let's get going</HeadingTwo>
       <p className='text-stone-400 mb-4'>
         Select a project to edit or add another project to your ever-growing
         list.{' '}

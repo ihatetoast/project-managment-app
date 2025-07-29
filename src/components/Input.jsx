@@ -2,12 +2,7 @@ export default function Input({ label, elementType, ...props }) {
   const classes =
     'w-full p-1 border-b-2 rounded-sm border-stone-300 bg-stone-200 text-stone-600 focus:outline-none focus:border-stone-600';
 
-  /** keep for later
-   * purple 540d6e
-   * redorange ee4266
-   * yellow ffd23f
-   * mint 3bceac
-   */
+
   const options = [
     { id: 0 , optionValue: '', optionText: 'Choose a category' },
     { id: 1, optionValue: 'dev', optionText: 'Dev (own, guided, debug)' },
