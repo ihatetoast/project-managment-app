@@ -1,22 +1,28 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import Modal from './Modal.jsx';
+import HeadingTwo from "./HeadingTwo.jsx";
 
 export default function NewTask({ onAddTask }) {
-  const [enteredTask, setEnteredTask] = useState();
-
+  const [enteredTask, setEnteredTask] = useState('');
+  const modal = useRef();
   function handleChange(e) {
     setEnteredTask(e.target.value);
   }
 
   function handleClick() {
-    const taskId = Math.ceil(Math.random() * 100);
-    const taskData = {
-      id: taskId,
-      task: enteredTask,
-    };
-    onAddTask(taskData);
+    if(enteredTask.trim() === '') {
+      modal.current.open();
+      return;
+    }
+    onAddTask(enteredTask);
     setEnteredTask("");
   }
   return (
+    <>
+     <Modal ref={modal} btnTxt="Ok!" >
+      <HeadingTwo>Whoops! Did you forget something?</HeadingTwo>
+      <p  className='text-stone-600 mb-4'>Please enter a task.</p>
+    </Modal>
     <div className="flex items-center gap-4">
       <input
         type="text"
@@ -31,5 +37,7 @@ export default function NewTask({ onAddTask }) {
         Add Task
       </button>
     </div>
+    </>
+    
   );
 }

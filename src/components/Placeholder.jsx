@@ -1,4 +1,5 @@
 import clipboardImg from '../assets/no-projects.png';
+import deskspaceImg from '../assets/laptop-3214756_640.png';
 import Button from './Button.jsx';
 import HeadingTwo from './HeadingTwo.jsx';
 export default function Placeholder({onInitAddProject}) {
@@ -6,9 +7,9 @@ export default function Placeholder({onInitAddProject}) {
   return (
     <div className='mt-24 text-center w-2/3'>
       <img
-        src={clipboardImg}
+        src={deskspaceImg}
         alt='a clipboard with an empty to-do list on'
-        className='w-16 h-16 object-contain mx-auto'
+        className='w-36 h-24 object-contain mx-auto'
       />
       <HeadingTwo>Let's get going</HeadingTwo>
       <p className='text-stone-400 mb-4'>

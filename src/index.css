@@ -4,13 +4,22 @@
 
 /* SIDEBAR BUTTON:  */
 
-.category-key {
+.key {
   display: inline-block;
-  width: 20px;
-  height: 20px;
   border-radius: 50%;
   margin-right: 4px;
 }
+/* key */
+.category-key {
+  width: 12px;
+  height: 12px;
+}
+/* color code in task buttons on side bar  */
+.project-key {
+  width: 16px;
+  height: 16px;
+}
+
 .purple {
   background-color: #540d6e;
 }
