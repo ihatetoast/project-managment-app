@@ -1,7 +1,8 @@
-import clipboardImg from '../assets/no-projects.png';
+
 import deskspaceImg from '../assets/laptop-3214756_640.png';
 import Button from './Button.jsx';
 import HeadingTwo from './HeadingTwo.jsx';
+
 export default function Placeholder({onInitAddProject}) {
 
   return (
