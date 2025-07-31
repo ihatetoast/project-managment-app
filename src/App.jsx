@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { ProjectContext } from "./store/project-context";
 import Sidebar from "./components/Sidebar";
 import Placeholder from "./components/Placeholder";
 import NewProject from "./components/NewProject";
@@ -107,6 +107,7 @@ function App() {
   }
 
   return (
+    <ProjectContext>
     <main className="my-8 flex h-screen gap-8">
       <Sidebar
         onInitAddProject={handleInitAddProject}
@@ -116,6 +117,7 @@ function App() {
       />
       {mainContent}
     </main>
+    </ProjectContext>
   );
 }
 
